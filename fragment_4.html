@@ -1,0 +1,27 @@
+</select>
+</td>
+</tr>
+</table>
+
+
+<h1>非定期／単発タスク</h1>
+
+<table>
+<tr>
+<th>
+<input type="radio" name="finished_task_type" value="irregular_weekly">
+<label for="irregular_weekly_tasks">目標は1週間以内</label>
+</th>
+<th>
+<input type="radio" name="finished_task_type" value="irregular_monthly">
+<label for="irregular_monthly_tasks">目標は1ヶ月以内</label>
+</th>
+<th>
+<input type="radio" name="finished_task_type" value="irregular_yearly">
+<label for="irregular_yearly_tasks">目標は1ヶ月より後</label>
+</th>
+</tr>
+
+<tr>
+<td>
+<select id="irregular_weekly_tasks" name="irregular_weekly_tasks" size="10" onblur="document.in.irregular_weekly_tasks.selectedIndex=-1;">

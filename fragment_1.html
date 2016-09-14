@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="task_mng.css" type="text/css">
+<script type="text/javascript" src="task_mng.js"></script>
+<base target="_top">
+<title>ゆるめに雑用を管理しませう</title>
+</head>
+<body>
+<form name="in">
+<div class="dbl_col">
+<h1>定期的／継続的タスク</h1>
+<table>
+<tr>
+<th>
+<input type="radio" name="finished_task_type" value="regular_weekly">
+<label for="regular_weekly_tasks">1週間以内の周期</label>
+</th>
+<th>
+<input type="radio" name="finished_task_type" value="regular_monthly">
+<label for="regular_monthly_tasks">1ヶ月以内の周期</label>
+</th>
+<th>
+<input type="radio" name="finished_task_type" value="regular_yearly">
+<label for="regular_yearly_tasks">1ヶ月超の周期</label>
+</th>
+</tr>
+
+<tr>
+<td>
+<select id="regular_weekly_tasks" name="regular_weekly_tasks" size="10" onblur="document.in.regular_weekly_tasks.selectedIndex=-1;">

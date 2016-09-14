@@ -1,0 +1,38 @@
+</select>
+に行った (終了した) 作業を記録したいときは、ラジオボタンで種類を選んで、セレクタでその作業内容を選んで、
+<input type="button" value="記録ボタン" onclick="record_finished_task()">
+を押してね。
+<span class="red">赤字</span>は期限超過の作業ですよ。
+</li>
+
+<li>新しい定期的／継続的タスクを登録したいときは、周期
+<input type="text" name="period_for_regular_task" size="3">
+(単位: 日) と内容
+<input type="text" name="name_of_new_regular_task" size="20">
+を入力して、
+<input type="button" value="記録ボタン" onclick="register_new_regular_task()">
+を押してね。
+</li>
+
+<li>新しい非定期／単発タスクを登録したいときは、目標期日
+<input type="date" name="deadline_for_irregular_task" placeholder="2016-09-20" maxlength="10" size="10">
+と内容
+<input type="text" name="name_of_new_irregular_task" size="20">
+を入力して、
+<input type="button" value="記録ボタン" onclick="register_new_irregular_task()">
+を押してね。
+</li>
+<li>最後に
+<input type="button" value="おまじない" onclick="add_last_command()">
+をしてから、その結果できあがる以下のコマンドをコンソールに貼り付けて、その実行後に
+<input type="button" value="リロードボタン" onclick="location.reload()">
+を押してね。
+</li>
+</ul>
+
+<textarea cols="60" rows="3" name="commands"></textarea>
+
+</form>
+
+
+<p class="last_mod">このページの最終更新日時: 
