@@ -25,7 +25,7 @@
   sed s/\"//g | ./create_select_options.pl i_m); \
  cat fragment_6.html; \
  (sqlite3 -csv chores.db \
-  "select * from irregular_chores_idx where validity=1 and date('now', '+31 days') < to_be_done_by;" | \
+  "select * from irregular_chores_idx where validity=1 and date('now', '+31 days') < to_be_done_by order by to_be_done_by;" | \
   sed s/\"//g | ./create_select_options.pl i_y); \
  cat fragment_7.html; \
  echo "<option value=\"`date -v-2d '+%Y-%m-%d'`\">`date -v-2d '+%Y-%m-%d'`</option>\n<option value=\"`date -v-1d '+%Y-%m-%d'`\">`date -v-1d '+%Y-%m-%d'`</option>\n<option value=\"`date '+%Y-%m-%d'`\" selected>`date '+%Y-%m-%d'`</option>"; \
