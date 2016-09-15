@@ -26,7 +26,7 @@
 そしてそのHTMLページを、
 
 * ブラウザのホームからパッと開けるようにしておく、または、
-* `~/.bash_profile` に `open ~/Documents/hoge/fuga/index.html` とか書いておいて強制的にほぼ毎日開くようにしておく
+* `~/.bash_profile` に `open ~/Documents/hoge/fuga/index.html` とか書いておいて強制的にほぼ毎日開くようにしておく (もしくは、`~/.bash_profile` に `alias chores='cd ~/Documents/hoge/fuga/'` とか書いておいて、`chores` と打つだけでここのディレクトリに来られるようにしておく)
 
 ことで、ふんわりと状況確認および進捗反映をしたいなあ、と。
 HTMLページを使うならLocalStorageを使っても良さそうだけど、とりあえず使い慣れているもので作ってしまおう。
