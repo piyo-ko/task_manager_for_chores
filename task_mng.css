@@ -26,8 +26,15 @@ th, td {
 p {
   text-indent: 1em;
 }
+select {
+  background: lightyellow;
+  color: darkgreen;
+}
 .red {
   color: orangered;
+}
+option.red:checked:not(:focus) {
+  color: blue;
 }
 .last_mod {
   color: green;

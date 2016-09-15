@@ -18,14 +18,10 @@ function record_finished_task() {
   //var s=d + "," + which_type + "," + task +"\n";
   //document.in.commands.value += s;
   var sql="";
-  if (which_type=='regular_weekly_tasks' ||
-    which_type=='regular_monthly_tasks' ||
-    which_type=='regular_yearly_tasks') {
+  if (which_type=='regular_weekly' || which_type=='regular_monthly' || which_type=='regular_yearly') {
     sql="insert into regular_chores_rec (reg_chore_id, conducted_on) values (" + task + ", '" + d + "'); ";
     sql += "update regular_chores_idx set last_conducted_on='" + d + "' where reg_chore_id = " + task + ";";
-  } else if (which_type=='irregular_weekly_tasks' ||
-    which_type=='irregular_monthly_tasks' ||
-    which_type=='irregular_yearly_tasks') {
+  } else if (which_type=='irregular_weekly' || which_type=='irregular_monthly' || which_type=='irregular_yearly') {
     sql="update irregular_chores_idx set conducted_on='" + d + "' where irr_chore_id = " + task + ";";
   }
   //console.log(sql);
@@ -43,6 +39,18 @@ function register_new_irregular_task() {
   var sql="insert into irregular_chores_idx (validity, to_be_done_by, what_to_do) values (1, '" + document.in.deadline_for_irregular_task.value + "', '" + document.in.name_of_new_irregular_task.value + "');";
   cmd_str += "sqlite3 chores.db \"" + sql + "\"\n";
   document.in.commands.value=cmd_str;
+}
+
+var sel_ids=['regular_weekly_tasks', 'regular_monthly_tasks', 'regular_yearly_tasks', 'irregular_weekly_tasks', 'irregular_monthly_tasks', 'irregular_yearly_tasks'];
+
+function reset_op_color(focused_sel_idx) {
+  //console.log("reset_op_color: " + focused_sel_idx);
+  for (var i=0; i<6; i++) {
+    if (i!=focused_sel_idx) {
+      document.getElementById(sel_ids[i]).selectedIndex=-1;
+    }
+    //console.log("i=" + i);
+  }
 }
 
 function add_last_command() {
