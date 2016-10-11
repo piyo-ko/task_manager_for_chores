@@ -22,15 +22,30 @@
 <input type="button" value="記録ボタン" onclick="register_new_irregular_task()">
 を押してね。
 </li>
-<li>最後に
+
+<li>既存の定期的／継続的タスクの周期を変更したいときは、ラジオボタンで種類を選んで、セレクタでその作業内容を選んで、新しい周期
+<input type="text" name="new_period_for_regular_task" size="3">
+(単位: 日) を入力して、
+<input type="button" value="変更ボタン" onclick="change_period()">
+を押してね。
+</li>
+
+<li>既存の非定期／単発タスクの目標期日を変更したいときは、ラジオボタンで種類を選んで、セレクタでその作業内容を選んで、新しい目標期日
+<input type="date" name="new_deadline_for_irregular_task" placeholder="2017-09-20" maxlength="10" size="10">を入力して、
+<input type="button" value="変更ボタン" onclick="change_deadline()">
+を押してね。
+</li>
+
+<li class="red">最後に
 <input type="button" value="おまじない" onclick="add_last_command()">
 をしてから、その結果できあがる以下のコマンドをコンソールに貼り付けて、その実行後に
 <input type="button" value="リロードボタン" onclick="location.reload()">
 を押してね。
 </li>
+
 </ul>
 
-<textarea cols="60" rows="3" name="commands"></textarea>
+<textarea cols="80" rows="10" name="commands"></textarea>
 
 </form>
 

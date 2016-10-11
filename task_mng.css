@@ -33,9 +33,6 @@ select {
 .red {
   color: orangered;
 }
-option.red:checked:not(:focus) {
-  color: blue;
-}
 .last_mod {
   color: green;
   font-style: italic;
