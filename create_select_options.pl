@@ -53,7 +53,7 @@ while (<STDIN>) { #うっかり単に<>と書いているとダメ。Can't open 
 		if ($red_alert==1) {
 			print STDOUT " class=\"red\"";
 		}
-		print STDOUT encode('utf-8', " title=\"$period" . "日周期、前回は[$last_conducted_on]\">$what_to_do</option>\n");
+		print STDOUT encode('utf-8', " title=\"$what_to_do" . "は" . "$period" . "日周期、前回は[$last_conducted_on]\">$what_to_do</option>\n");
 	} elsif ($mode eq 'i_w' || $mode eq 'i_m' || $mode eq 'i_y') {
 		my ($id, $validity, $to_be_done_by, $what_to_do, $conducted_on) = split(/,/, decode('utf-8', $_));
 		my $red_alert=0;
@@ -64,6 +64,6 @@ while (<STDIN>) { #うっかり単に<>と書いているとダメ。Can't open 
 		if ($red_alert==1) {
 			print STDOUT " class=\"red\"";
 		}
-		print STDOUT encode('utf-8', " title=\"目標期日は[$to_be_done_by]\">$what_to_do</option>\n");
+		print STDOUT encode('utf-8', " title=\"$what_to_do" . "の目標期日は[$to_be_done_by]\">$what_to_do</option>\n");
 	}
 }
