@@ -1,46 +1,47 @@
 </select>
-に行った (終了した) 作業を記録したいときは、ラジオボタンで種類を選んで、セレクタでその作業内容を選んで、
+に行った (終了した) 作業を記録するには、タスクを選択して、
 <input type="button" value="記録ボタン" onclick="record_finished_task()">
-を押してね。
-<span class="red">赤字</span>は期限超過の作業ですよ。
+を押します。
+<span class="red">赤字</span>は期限超過の作業です。
 </li>
 
-<li>新しい定期的／継続的タスクを登録したいときは、周期
+<li>新しい定期的／継続的タスクを登録するには、周期
 <input type="text" name="period_for_regular_task" size="3">
 (単位: 日) と内容
 <input type="text" name="name_of_new_regular_task" size="20">
 を入力して、
 <input type="button" value="記録ボタン" onclick="register_new_regular_task()">
-を押してね。
+を押します。
 </li>
 
-<li>新しい非定期／単発タスクを登録したいときは、目標期日
+<li>新しい非定期／単発タスクを登録するには、目標期日
 <input type="date" name="deadline_for_irregular_task" placeholder="2016-09-20" maxlength="10" size="10">
 と内容
 <input type="text" name="name_of_new_irregular_task" size="20">
 を入力して、
 <input type="button" value="記録ボタン" onclick="register_new_irregular_task()">
-を押してね。
+を押します。
 </li>
 
-<li>既存の定期的／継続的タスクの周期を変更したいときは、ラジオボタンで種類を選んで、セレクタでその作業内容を選んで、新しい周期
+<li>既存の定期的／継続的タスクの周期を変更するには、タスクを選択して、新しい周期
 <input type="text" name="new_period_for_regular_task" size="3">
 (単位: 日) を入力して、
 <input type="button" value="変更ボタン" onclick="change_period()">
-を押してね。
+を押します。
 </li>
 
-<li>既存の非定期／単発タスクの目標期日を変更したいときは、ラジオボタンで種類を選んで、セレクタでその作業内容を選んで、新しい目標期日
+<li>既存の非定期／単発タスクの目標期日を変更するには、タスクを選択して、新しい目標期日
 <input type="date" name="new_deadline_for_irregular_task" placeholder="2017-09-20" maxlength="10" size="10">を入力して、
 <input type="button" value="変更ボタン" onclick="change_deadline()">
-を押してね。
+を押します。
 </li>
 
-<li class="red">最後に
+<li><span class="red">最後に
 <input type="button" value="おまじない" onclick="add_last_command()">
-をしてから、その結果できあがる以下のコマンドをコンソールに貼り付けて、その実行後に
-<input type="button" value="リロードボタン" onclick="location.reload()">
-を押してね。
+をしてから、その結果できあがる以下のコマンドをコンソールに貼り付けて実行してください。</span>
+なお、コマンド実行後に本ページを
+<input type="button" value="リロード" onclick="location.reload()">
+すると、変更反映後のタスク一覧を確認できます。
 </li>
 
 </ul>

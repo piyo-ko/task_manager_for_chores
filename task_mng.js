@@ -120,6 +120,16 @@ function add_last_command() {
   document.in.commands.value=cmd_str;
 }
 
+function display_regular_tasks(x) {
+  if (x) {
+    document.getElementById("reg_tab").style.display="inline-table";
+    document.getElementById("irr_tab").style.display="none";
+  } else {
+    document.getElementById("reg_tab").style.display="none";
+    document.getElementById("irr_tab").style.display="inline-table";
+  }
+}
+
 window.onload = function () {
   cmd_str="";
   document.in.reset();

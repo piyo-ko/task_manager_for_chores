@@ -1,18 +1,15 @@
 body {
   background: khaki;
   color: midnightblue;
-  padding: 1em;
-}
-@media (min-width: 60em) {
-  .dbl_col {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
+  padding-left: 1em;
+  padding-right: 1em;
 }
 h1 {
   font-size: large;
   margin-top: 0;
+  text-decoration: underline;
+  display: inline-block;
+  vertical-align: top;
 }
 select {
   background: lightyellow;
@@ -21,6 +18,8 @@ select {
 }
 table {
   border-collapse: separate;
+  display: inline-table;
+  vertical-align: top;
 }
 th, td {
   border: solid 1px green;
@@ -28,7 +27,8 @@ th, td {
   padding: 4pt;
 }
 p {
-  text-indent: 1em;
+  color: green;
+  text-indent: 0;
 }
 .red {
   color: orangered;
@@ -41,3 +41,13 @@ p {
 label {
   cursor: pointer;
 }
+#reg_tab, #irr_tab {
+  display: none;
+}
+span.button {
+  background: greenyellow;
+}
+span.button:hover {
+  background: orange;
+}
+

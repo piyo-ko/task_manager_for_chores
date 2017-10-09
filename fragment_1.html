@@ -5,13 +5,15 @@
 <link rel="stylesheet" href="task_mng.css" type="text/css">
 <script type="text/javascript" src="task_mng.js"></script>
 <base target="_top">
-<title>ゆるめに雑用を管理しませう</title>
+<title>ゆるめに雑用を管理する</title>
 </head>
 <body>
+<p>《共通の注意事項》 タスクを選択するには、種類をラジオボタンで選び、セレクタで作業内容を選んでください。</p>
 <form name="in">
-<div class="dbl_col">
-<h1>定期的／継続的タスク</h1>
-<table>
+
+<div class="task_group" id="regular_task_group">
+<h1>定期的／継続的タスク <span class="button" onclick="display_regular_tasks(true)">[開く]</span></h1>
+<table id="reg_tab">
 <tr>
 <th>
 <input type="radio" name="finished_task_type" value="regular_weekly" id="select_regular_weekly_tasks">
